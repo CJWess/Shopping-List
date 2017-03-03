@@ -1,0 +1,13 @@
+<% if @errors %>
+  <% @errors.each do |error| %>
+  <p style="color:red"> <%= error %> </p>
+  <% end %>
+<% end %>
+
+  <a href='/' id='new-ingredient-button'>New Ingredient</a>
+<form id="new-meal-form" action="/meals" method="post">
+  <label>Meal Name: </label>
+  <input name="meal[name]"><br><br>
+  <div id='ingredient-inputs'></div>
+  <input class='new-meal-submit' type="submit" value="submit">
+</form>

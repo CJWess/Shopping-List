@@ -1,0 +1,9 @@
+<h1><%= @list.name %></h1>
+<ul>
+<% @items_array.each do |item_array| %>
+<li>
+  <%= "#{item_array[0]}, #{item_array[1]}, #{item_array[2]}" %>
+</li>
+<% end %>
+
+</ul>

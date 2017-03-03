@@ -1,0 +1,11 @@
+<h1> Your profile </h1>
+<% current_user.lists.each do |list| %>
+  <ul>
+    <li><a href="/list/<%=list.id%>"> <%= list.name %></a> </li>
+      <ul>
+        <% list.meals.each do |meal| %>
+        <li> <%= meal.name %> </li>
+        <% end %>
+      </ul>
+  </ul>
+  <% end %>
